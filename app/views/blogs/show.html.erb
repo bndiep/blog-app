@@ -1,0 +1,8 @@
+<h3><%= @blog.title %></h3>
+<p><%= @blog.content %></p>
+<br>
+<p>Back to: <%= link_to "All the Blogs", blogs_path %></p>
+<br>
+<p><%= link_to 'Delete Blog Post', delete_blog_path(@blog), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+<br>
+<p><%= link_to "Edit Blog Post", edit_blog_path(@blog) %></p>

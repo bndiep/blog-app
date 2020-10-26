@@ -1,0 +1,10 @@
+<h1>Blog App</h1>
+<ul>
+    <% @blogs.each do |blog| %>
+        <li>
+            <%= link_to blog.title, blog_path(blog) %>
+        </li>
+    <% end %>
+</ul>
+
+<p id="new-blog"><%= link_to 'New Blog Post', new_blog_path %></p>

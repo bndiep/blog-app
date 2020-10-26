@@ -1,0 +1,19 @@
+<h1>Edit Blog Post</h1>
+<%= form_with model: @blog, method: "patch", local: true do |form| %>
+    <%= form.label :title, "Title of Blog: " %>
+    <%= form.text_field :title %>
+    <br>
+
+    <% flash.each do |type, message| %>
+        <div>
+            <%= message %>
+        </div>
+    <% end %>
+
+    <%= form.label :content, "What's on your mind?: " %>
+    <%= form.text_field :content %>
+    <br>
+    <%= form.submit :create, :class => 'Submit Edit' %>
+<% end %>
+
+<p class="home">Back to: <%= link_to 'All the Blogs', blogs_path %></p>
